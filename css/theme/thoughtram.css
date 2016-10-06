@@ -3,7 +3,7 @@
  *
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,800,700,600);
 img {
   border: none !important;
   box-shadow: none !important; }
@@ -246,7 +246,7 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 36px;
   font-weight: normal;
   color: #000; }
@@ -272,7 +272,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #000;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;

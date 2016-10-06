@@ -10,6 +10,9 @@
 .c-alert, .c-alert * {
   color: red !important; }
 
+.c-black {
+  color: #000 !important; }
+
 .c-light {
   color: #fff !important; }
 
