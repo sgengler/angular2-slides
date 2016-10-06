@@ -73,6 +73,7 @@
 
         <section class="image-slide">
           <h2>Performance</h2>
+          <p>&nbsp;</p>
           <ul>
             <li class="fragment">Rendering: 2.5x faster than Angular 1</li>
             <li class="fragment">DOM Updates / Re-render: 4.2x faster than Angular 1</li>
@@ -153,6 +154,17 @@ console.log(x);  // 1
 
         <section>
           <h2>es2015 Features</h2>
+          <p>Template Literals</p>
+          <pre ng-non-bindable ng-non-bindable><code>var template = `
+  <div>
+    <h1>Hello World</h1>
+    <h2><a href="/about">About Us</a></h2>
+  </div>
+`</code></pre>
+        </section>
+
+        <section>
+          <h2>es2015 Features</h2>
           <p>Arrow Functions</p>
           <pre ng-non-bindable ng-non-bindable>
 <code>var chemicals = [
@@ -173,19 +185,91 @@ var a3 = chemicals.map(s => s.length);
 </pre>
         </section>
 
+
         <section>
           <h2>es2015 Features</h2>
           <p>Arrow Functions</p>
           <pre ng-non-bindable ng-non-bindable>
-<code>function Person(){
+<foo-code>var chemicals = [
+  "Hydrogen",
+  "Helium",
+  "Lithium",
+  "Beryl­lium"
+];
+
+//old way
+var a2 = chemicals.map(function(s){
+  return s.length;
+});
+
+//new way
+var a3 = chemicals.map(<span class="c-black">s => s.length</span>);
+</foo-code>
+</pre>
+        </section>
+
+        <section>
+          <h2>es2015 Features</h2>
+          <p>Arrow Functions</p>
+          <div class="col-2">
+            <div>
+              <p class="footnote">ES5</p>
+              <pre ng-non-bindable ng-non-bindable><code>function Person(){
+  var self = this;
+  this.age = 0;
+
+  setTimeout(function {
+    self.age++;
+  }, 1000);
+}
+                </code>
+              </pre>
+            </div>
+          <div>
+            <p class="footnote">ES2015</p>
+            <pre ng-non-bindable ng-non-bindable><code >function Person(){
   this.age = 0;
 
   setTimeout(() => {
     this.age++;
   }, 1000);
 }
-</code>
-</pre>
+              </code>
+            </pre>
+          </div>
+        </div>
+        </section>
+
+        <section>
+          <h2>es2015 Features</h2>
+          <p>Arrow Functions</p>
+          <div class="col-2">
+            <div>
+              <p class="footnote">ES5</p>
+              <pre ng-non-bindable ng-non-bindable><foo-code>function Person(){
+  <span class="c-black">var self = this;</span>
+  this.age = 0;
+
+  setTimeout(function {
+    <span class="c-black">self.age++;</span>
+  }, 1000);
+}
+      </foo-code>
+              </pre>
+            </div>
+          <div>
+            <p class="footnote">ES2015</p>
+            <pre ng-non-bindable ng-non-bindable><foo-code >function Person(){
+  this.age = 0;
+
+  setTimeout(() => {
+    <span class="c-black">this.age++;</span>
+  }, 1000);
+}
+      </foo-code>
+            </pre>
+          </div>
+        </div>
         </section>
 
 
@@ -361,6 +445,17 @@ let cabrio = new Convertible();</span></foo-code></pre>
         </section>
 
         <section>
+          <h2>Import Syntax</h2>
+          <div class="ta-l">
+            <p class="footnote ta-l">Most bundlers (webpack, browserify, etc) know to look in /node_modules</p>
+            <div>
+              <pre ng-non-bindable><code class="small">import _ from 'underscore';</code></pre>
+              <pre ng-non-bindable><code class="small">import $ from 'jQuery';</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section>
           <h2>Typescript</h2>
         </section>
 
@@ -375,6 +470,7 @@ var foo: any = 123;
 var bar: string|boolean = false;
 
 var list:number[] = [1, 2, 3];
+var list:Array&lt;number&gt; = [1, 2, 3];
 
 function add(x: number, y: number): number {
   return x+y;
@@ -392,6 +488,7 @@ var foo: any = 123;
 var bar: string|boolean = false;</span>
 
 var list:number[] = [1, 2, 3];
+var list:Array&lt;number&gt; = [1, 2, 3];
 
 function add(x: number, y: number): number {
   return x+y;
@@ -408,7 +505,8 @@ var foo: any = 123;
 
 var bar: string|boolean = false;
 
-<span style="color: #000;">var list:number[] = [1, 2, 3];</span>
+<span style="color: #000;">var list:number[] = [1, 2, 3];
+var list:Array&lt;number&gt; = [1, 2, 3];</span>
 
 function add(x: number, y: number): number {
   return x+y;
